@@ -1,0 +1,19 @@
+<!-- <span class="setup">Given Number</span>
+
+<h1 class="punchline">{{data}}</h1>
+
+<button type="button" class="btn btn-success" (click)="add()" [disabled]='!isDisable'>Add Number</button>
+
+<button type="button" class="btn btn-danger" (click)="delete()">Delete Number</button>
+
+<br>
+
+<label>Passing the data using event binding</label>
+
+<input type="text" class="form-control" [(ngModel)]="name">
+
+<p>{{name}}</p>
+ -->
+<input type="text" class="form-control" [(ngModel)]="username" >
+<button (click)="resetIt()" [disabled]='!isDisable'> Reset </button>
+<h2>{{ username }}</h2>
