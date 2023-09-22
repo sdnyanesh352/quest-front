@@ -40,3 +40,15 @@ li a:hover
     background-color: blue;
 
 }
+.footer-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  .footer-content {
+    margin: 0 auto;
+    text-align: center;
+  }
