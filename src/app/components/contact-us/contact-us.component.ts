@@ -8,14 +8,6 @@ import { EmployeeForm } from '../../components/model/employeeform';
   styleUrls: ['./contact-us.component.css']
 })
 export class ContactUsComponent {
-  details:string="Dnyaneshwar";
-  countClick:number[]=[];
-  isVisible:boolean=true;
-  toggleText(){
-    this.isVisible=!this.isVisible;
-    this.countClick.push(this.countClick.length+1);
-
-  }
   emp!:EmployeeForm[];
 
   empform!:FormGroup;
@@ -38,6 +30,7 @@ export class ContactUsComponent {
       {
 
         firstName:['',[Validators.required,Validators.pattern(this.namepattern)]],
+
         lastName:['',[Validators.required,Validators.pattern(this.lastnamepattern)]]
 
       }
@@ -59,5 +52,6 @@ export class ContactUsComponent {
     }
 
   }
+ 
 
 }

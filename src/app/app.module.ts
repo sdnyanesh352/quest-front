@@ -12,7 +12,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { Routes } from '@angular/router';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
-
+import {  ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -28,7 +28,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule
+    AppRoutingModule,FormsModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

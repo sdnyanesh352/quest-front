@@ -1,9 +1,45 @@
 <p>Assignment 25-09-2023!</p>
 
-<button (click)="toggleText()">Display details</button>
+<form [formGroup]="empform" (ngSubmit)="submit()" class="employee-form">
 
-<p *ngIf="isVisible"> {{details}}</p>
-<ul>
-<p [ngClass]="{'blue-background':click>4}" *ngFor="let click of countClick">{{click}}</p>
-</ul>
+    <h3>Employee Form</h3>
+<div class="form-group">
+    <label> FirstName:
 
+        <input type="text" formControlName="firstName" [pattern]="namepattern">
+
+    <div style="color:red;" *ngIf="empform.controls['firstName'].touched && empform.controls['firstName'].invalid">
+
+    <span *ngIf="empform.controls['firstName'].hasError('required')">name is required</span>
+
+    <span *ngIf="empform.controls['firstName'].hasError('pattern')">only alphabets between 2 to 15 characters</span>
+
+    </div>
+
+</label>
+</div>
+
+<br>
+<div class="form-group">
+<label> LastName:
+
+    <input type="text" formControlName="lastName" [pattern]="lastnamepattern">
+    <div style="color:red;" *ngIf="empform.controls['lastName'].touched && empform.controls['lastName'].invalid">
+
+        <span *ngIf="empform.controls['lastName'].hasError('required')">name is required</span>
+    
+        <span *ngIf="empform.controls['lastName'].hasError('pattern')">only alphabets between 2 to 15 characters</span>
+    
+        </div>
+
+
+
+</label>
+</div>
+<br>
+
+ 
+<div class="button-container">
+<button type="submit">submit</button>
+</div>
+</form>
