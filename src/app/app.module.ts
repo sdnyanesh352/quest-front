@@ -13,6 +13,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { Routes } from '@angular/router';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import {  ReactiveFormsModule } from '@angular/forms';
+import { Forms2509dComponent } from './assignments/forms2509d/forms2509d.component';
+import { AssignmentComponent } from './assignments/assignment/assignment.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import {  ReactiveFormsModule } from '@angular/forms';
     FramesComponent,
     HeaderComponent,
     FooterComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    Forms2509dComponent,
+    AssignmentComponent
   ],
   imports: [
     BrowserModule,

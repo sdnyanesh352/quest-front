@@ -2,9 +2,6 @@ export class EmployeeForm
 
 {
 
-    firstName!:string;
-    lastName!:string;
-
-   
-
+    projectName!:string;
+    email!:string;
 }
