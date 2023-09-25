@@ -11,7 +11,8 @@ import { FramesComponent } from './components/frames/frames.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { Routes } from '@angular/router';
-
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import {  ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,11 +23,12 @@ import { Routes } from '@angular/router';
     SuccessAlertComponent,
     FramesComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule
+    AppRoutingModule,FormsModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
