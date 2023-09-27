@@ -15,6 +15,8 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import {  ReactiveFormsModule } from '@angular/forms';
 import { Forms2509dComponent } from './assignments/forms2509d/forms2509d.component';
 import { AssignmentComponent } from './assignments/assignment/assignment.component';
+import { HttpClientModule } from '@angular/common/http';
+import { EmpListComponent } from './components/emp-list/emp-list.component';
 
 
 @NgModule({
@@ -28,10 +30,11 @@ import { AssignmentComponent } from './assignments/assignment/assignment.compone
     FooterComponent,
     ContactUsComponent,
     Forms2509dComponent,
-    AssignmentComponent
+    AssignmentComponent,
+    EmpListComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,HttpClientModule,
     AppRoutingModule,FormsModule,ReactiveFormsModule
   ],
   providers: [],

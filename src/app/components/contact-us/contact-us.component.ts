@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { EmployeeForm } from '../../components/model/employeeform';
+import { EmployeeForm } from '../../alerts/model/employeeForm';
+import { MyserviceService } from '../../myservice.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -15,12 +16,9 @@ export class ContactUsComponent {
   namepattern="^[a-zA-Z ]{2,15}$";
   lastnamepattern="^[a-zA-Z ]{2,15}$";
 
-  constructor(private fb:FormBuilder)
+  constructor(private fb:FormBuilder,private ser:MyserviceService)
 
   {
-
- 
-
   }
 
   ngOnInit():void{
@@ -48,6 +46,11 @@ export class ContactUsComponent {
     {
 
       console.log(this.empform.value);
+      this.ser.save(this.empform.value).subscribe(data => {
+        console.log("from contact comp form : "+data);
+      });
+
+      //window.location.reload();
 
     }
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ValidatorFn, Validators } from '@angular/forms';
-import { EmployeeForm } from '../../components/model/employeeform';
+import { EmployeeForm } from '../../alerts/model/employeeForm';
 import { AbstractControl } from '@angular/forms';
 
 @Component({
