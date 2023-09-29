@@ -10,13 +10,18 @@ import { SuccessAlertComponent } from './alerts/success-alert/success-alert.comp
 import { FramesComponent } from './components/frames/frames.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import {  ReactiveFormsModule } from '@angular/forms';
 import { Forms2509dComponent } from './assignments/forms2509d/forms2509d.component';
 import { AssignmentComponent } from './assignments/assignment/assignment.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EmpListComponent } from './components/emp-list/emp-list.component';
+import { AddquestionComponent } from './components/qbank/addquestion/addquestion.component';
+import { QlistComponent } from './components/qbank/qlist/qlist.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { QuedetailsComponent } from './components/qbank/quedetails/quedetails.component';
+
 
 
 @NgModule({
@@ -31,11 +36,16 @@ import { EmpListComponent } from './components/emp-list/emp-list.component';
     ContactUsComponent,
     Forms2509dComponent,
     AssignmentComponent,
-    EmpListComponent
+    EmpListComponent,
+    AddquestionComponent,
+    QlistComponent,
+    DashboardComponent,
+    QuedetailsComponent
   ],
   imports: [
-    BrowserModule,HttpClientModule,
+    BrowserModule,HttpClientModule,RouterModule,
     AppRoutingModule,FormsModule,ReactiveFormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

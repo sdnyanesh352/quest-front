@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { EmployeeForm } from '../../alerts/model/employeeForm';
-import { MyserviceService} from '../../myservice.service';
+import { MyserviceService} from '../../services/myservice.service';
 
 @Component({
   selector: 'app-emp-list',

@@ -24,6 +24,55 @@
       "firstName": "aa",
       "lastName": "aa",
       "id": 6
+    },
+    {
+      "firstName": "tytu",
+      "lastName": "bndjjd",
+      "id": 7
+    }
+  ],
+  "getQuestions": [
+    {
+      "questionid": "what are questions",
+      "qanswer": "java and python",
+      "companyname": "Terenity",
+      "id": 1
+    },
+    {
+      "questionid": "fffffff",
+      "qanswer": "cccccccccc",
+      "companyname": "Terenity",
+      "id": 2
+    },
+    {
+      "questionid": "what are the features of java 8",
+      "qanswer": "lambda expression, date calendarb api, stream api",
+      "companyname": "Siemens",
+      "id": 3
+    },
+    {
+      "questionid": "kkkk",
+      "qanswer": "hhjfxcn ",
+      "companyname": "BNY",
+      "id": 4
+    },
+    {
+      "questionid": "hhhd",
+      "qanswer": "zxkjnlhn",
+      "companyname": "BNY",
+      "id": 5
+    },
+    {
+      "questionid": "what is functional interface",
+      "qanswer": "functional interface is special inteface introduced in java 8 which has only one abstract method",
+      "companyname": "Siemens",
+      "id": 6
+    },
+    {
+      "questionid": "tell me about yourself",
+      "qanswer": "i am student fresher looking for new opportunities in it field",
+      "companyname": "Other",
+      "id": 7
     }
   ]
 }
