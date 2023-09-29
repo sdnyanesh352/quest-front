@@ -21,6 +21,11 @@ import { AddquestionComponent } from './components/qbank/addquestion/addquestion
 import { QlistComponent } from './components/qbank/qlist/qlist.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { QuedetailsComponent } from './components/qbank/quedetails/quedetails.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StarratingComponent } from './components/tools/starrating/starrating.component';
+import { ReportinfoComponent } from './components/tools/reportinfo/reportinfo.component';
+import { MatButtonModule} from '@angular/material/button';
+import{MatCheckboxModule} from '@angular/material/checkbox';
 
 
 
@@ -40,11 +45,14 @@ import { QuedetailsComponent } from './components/qbank/quedetails/quedetails.co
     AddquestionComponent,
     QlistComponent,
     DashboardComponent,
-    QuedetailsComponent
+    QuedetailsComponent,
+    StarratingComponent,
+    ReportinfoComponent
   ],
   imports: [
-    BrowserModule,HttpClientModule,RouterModule,
-    AppRoutingModule,FormsModule,ReactiveFormsModule
+    BrowserModule,HttpClientModule,RouterModule, MatButtonModule,
+    MatCheckboxModule,
+    AppRoutingModule,FormsModule,ReactiveFormsModule, BrowserAnimationsModule
     
   ],
   providers: [],

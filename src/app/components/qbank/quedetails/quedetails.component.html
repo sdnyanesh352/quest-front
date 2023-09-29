@@ -12,6 +12,7 @@
     <div class="row">
         <button (click)="previous()" [disabled]="!isQuestionsAvailable">Previous</button>
         <button (click)="next()" [disabled]="!isQuestionsAvailable">Next</button>
+        <button (click)="report()" >Report issue</button>
     </div>
     </div>
     <div *ngIf="!isQuestionsAvailable">
@@ -19,5 +20,6 @@
     
     </div>
 
-
+<div><app-starrating></app-starrating></div>
+<div *ngIf="istoReported"><app-reportinfo></app-reportinfo></div>
 </div>
