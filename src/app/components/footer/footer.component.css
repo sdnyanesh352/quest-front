@@ -1,17 +1,4 @@
 
-ul{
-
-    list-style-type: none;
-
-    margin:0;
-
-    padding: 0;
-
-    overflow:hidden;
-
-    background-color: red;
-
-}
 
 li{
 
@@ -44,7 +31,7 @@ li a:hover
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #333;
+    background-color: #595757;
     color: #fff;
     padding: 10px;
   }
