@@ -4,12 +4,9 @@
 
         <nav class="navbar">
             <ul class="nav">
-
                 <li class="active"><a routerLink="/">Home</a></li>
-                <li><a routerLink="dashboard">Dashboard</a></li>
-
-                <li><a routerLink="signup">Registration</a></li>
-
+                <li *ngIf="isLoggedIn"><a routerLink="dashboard">Dashboard</a></li>
+                <li *ngIf="!isLoggedIn"><a routerLink="sign-in">Login</a></li>
             </ul>
          
         </nav>
