@@ -15,6 +15,7 @@ export class LoginComponent {
   password:string='';
   rememberMe:boolean=false;
   isforgotPass:boolean=false;
+  isLoggedIn:boolean=false;
   constructor(private router : Router,  public authService: AuthService){
 
   }
@@ -32,8 +33,13 @@ export class LoginComponent {
 
   }
   loginWithGoogle(){
-    
-
+    this.authService.GoogleAuth();
+    if(this.isLoggedIn){
+      this.router.navigateByUrl("/dashboard");
+    }
+   }
+  ngOnInit(){
+this.isLoggedIn=this.authService.isLoggedIn;
   }
 
 }
