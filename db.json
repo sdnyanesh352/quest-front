@@ -73,6 +73,18 @@
       "qanswer": "i am student fresher looking for new opportunities in it field",
       "companyname": "Other",
       "id": 7
+    },
+    {
+      "questionid": "explain Observables",
+      "qanswer": "Observables are objects in angular which gives o",
+      "companyname": "Siemens",
+      "id": 8
+    },
+    {
+      "questionid": "are you there",
+      "qanswer": "yes",
+      "companyname": "Terenity",
+      "id": 9
     }
   ]
 }

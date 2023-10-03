@@ -26,6 +26,14 @@ import { StarratingComponent } from './components/tools/starrating/starrating.co
 import { ReportinfoComponent } from './components/tools/reportinfo/reportinfo.component';
 import { MatButtonModule} from '@angular/material/button';
 import{MatCheckboxModule} from '@angular/material/checkbox';
+import { SigupComponent } from './components/login/sigup/sigup.component';
+import { LoginComponent } from './components/login/login/login.component';
+import { AngularFireModule } from "@angular/fire/compat";
+import { AngularFireAuthModule } from "@angular/fire/compat/auth";
+import * as firebase from 'firebase/compat';
+import { environment } from 'src/environments/environment';
+import { ForgotPasswordComponent } from '../app/components/login/forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './components/login/verify-email/verify-email.component';
 
 
 
@@ -47,12 +55,18 @@ import{MatCheckboxModule} from '@angular/material/checkbox';
     DashboardComponent,
     QuedetailsComponent,
     StarratingComponent,
-    ReportinfoComponent
+    ReportinfoComponent,
+    SigupComponent,
+    LoginComponent,
+    ForgotPasswordComponent,
+    VerifyEmailComponent
   ],
   imports: [
     BrowserModule,HttpClientModule,RouterModule, MatButtonModule,
     MatCheckboxModule,
-    AppRoutingModule,FormsModule,ReactiveFormsModule, BrowserAnimationsModule
+    AppRoutingModule,FormsModule,ReactiveFormsModule, BrowserAnimationsModule,
+    MatButtonModule,AngularFireModule,AngularFireAuthModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     
   ],
   providers: [],

@@ -1,0 +1,13 @@
+.displayTable{
+    display: flex;
+    align-items: center;
+    height: 60vh;
+    padding-left: 50px;
+
+}
+.input{
+    border-radius: 5px;
+}
+.form-group{
+    padding-top: 5px;
+}
