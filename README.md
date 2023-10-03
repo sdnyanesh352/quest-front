@@ -15,3 +15,9 @@ Run `ng generate component component-name` to generate a new component. You can 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ![View App](src/assets/image2.PNG)
+
+
+## commands to test
+npm install
+json-server --watch db. json
+ng serve
