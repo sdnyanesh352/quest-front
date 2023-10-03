@@ -35,7 +35,7 @@
 </div> -->
 
 
-<div class="displayTable">
+<div class="displayTable" *ngIf="!isLoggedIn">
     <div class="displayTableCell">
       <div class="authBlock">
         <h3>Sign In</h3>
@@ -74,7 +74,7 @@
         </div>
       </div>
       <div class="formGroup">
-        <button type="button" (click)="authService.GoogleAuth()">
+        <button type="button" (click)="loginWithGoogle()">
           Log in with Google
         </button>
       </div>

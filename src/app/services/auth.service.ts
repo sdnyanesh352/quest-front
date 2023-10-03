@@ -109,6 +109,7 @@ export class AuthService {
     return this.afAuth.signOut().then(() => {
       localStorage.removeItem('user');
       this.router.navigate(['sign-in']);
+      window.location.reload;
     });
   }
   GoogleAuth() {
@@ -120,7 +121,15 @@ export class AuthService {
       .signInWithPopup(provider)
       .then((result) => {
         console.log('You have been successfully logged in!');
-        this.router.navigate(['dashboard']);
+        //this.router. navigateByUrl("/dashboard");
+        //this.router.navigate(['dashboard']);
+        //window.location.reload;
+
+        this.router.navigate(['/dashboard']).then(() => {
+
+          window.location.reload();
+    
+        });
       })
       .catch((error) => {
         console.log(error);
