@@ -1,0 +1,19 @@
+.displayTable{
+    display: flex;
+    align-items: center;
+    height: 60vh;
+    padding-left: 50px;
+}
+.forgot-pass-class{
+    display: flex;
+    align-items: center;
+    height: 30vh;
+    padding-left: 40%;
+
+}
+.input{
+    border-radius: 5px;
+}
+.form-group{
+    padding-top: 5px;
+}

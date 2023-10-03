@@ -1,0 +1,26 @@
+<div class="container mt-5">
+    <div class="row custom-wrapper">
+      <h2 class="mb-3 text-center">Report an issue</h2>
+      <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+        <div class="d-grid">
+          <select
+            class="custom-select mb-3"
+            (change)="changeIssue($event)"
+            formControlName="issueName"
+          >
+            <option value="">Choose issue</option>
+            <option *ngFor="let issue of Issue" [ngValue]="issue">
+              {{ issue }}
+            </option>
+          </select>
+          <!-- error block -->
+          <div class="invalid-feedback" *ngIf="isSubmitted && issueName?.invalid">
+            <sup>*</sup>Please provide Feedback
+          </div>
+          <button type="submit" class="btn btn-danger">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>

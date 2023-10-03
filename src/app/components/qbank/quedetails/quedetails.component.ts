@@ -13,6 +13,7 @@ export class QuedetailsComponent {
   data:any;
   isQuestionsAvailable:boolean=true;
   selectedRating:number=0;
+  istoReported:boolean=false;
 
   constructor(private router:ActivatedRoute, private qservice:QserviceService,private route:Router){
     this.id= this.router.snapshot.paramMap.get('id');
@@ -57,6 +58,8 @@ console.error("Thats it!!!");
       this.data=qform;
     })
   }
-
+report(){
+this.istoReported=true;
+}
 
 }
