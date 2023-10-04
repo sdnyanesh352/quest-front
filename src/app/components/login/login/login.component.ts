@@ -40,6 +40,9 @@ export class LoginComponent {
    }
   ngOnInit(){
 this.isLoggedIn=this.authService.isLoggedIn;
+if(this.isLoggedIn){
+  this.router.navigateByUrl("/dashboard");
+}
   }
 
 }
