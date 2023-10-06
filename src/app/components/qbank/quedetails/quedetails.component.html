@@ -1,25 +1,38 @@
 <div class="qdetailsclass">
-
     <div *ngIf="isQuestionsAvailable" class="qcontainer">
         <div>
             <button [routerLink]="['/dashboard']"> Back</button>
         </div>
     
         <div class="questionclass">{{data.id}} ) {{data.questionid}}</div>
-        <div class="answerclass">Answer : {{data.qanswer}}</div>
+        <div class="answerclass">Answer: {{data.qanswer}}</div>
         <div><span class="badge badge-primary">{{data.companyname}}</span></div>
-        
-    <div class="row">
-        <button (click)="previous()" [disabled]="!isQuestionsAvailable">Previous</button>
-        <button (click)="next()" [disabled]="!isQuestionsAvailable">Next</button>
-        <button (click)="report()" >Report issue</button>
-    </div>
-    </div>
-    <div *ngIf="!isQuestionsAvailable">
-        NO QUESTIONS AVAILABLE
-    
+
+        <!-- Button container -->
+        <div class="button-container">
+            <!-- Previous button -->
+            <button (click)="previous()" [disabled]="!isQuestionsAvailable">Previous</button>
+            
+            <!-- Next button -->
+            <button (click)="next()" [disabled]="!isQuestionsAvailable">Next</button>
+            
+            <!-- Report button -->
+            <button (click)="report()">Report issue</button>
+        </div>
     </div>
 
-<div><app-starrating></app-starrating></div>
-<div *ngIf="istoReported"><app-reportinfo></app-reportinfo></div>
+    <div *ngIf="!isQuestionsAvailable">
+        NO QUESTIONS AVAILABLE
+    </div>
+
+    <div>
+        <div>
+            <div class="ratings">
+                <p>Average Rating: {{ calculateAverageRating(data?.ratings) }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div><app-starrating></app-starrating></div>
+    <div *ngIf="istoReported"><app-reportinfo></app-reportinfo></div>
 </div>

@@ -5,4 +5,5 @@ export class Qform
     question!:string;
     answer!:string;
     company!:string;
+    ratings: number[];
 }
