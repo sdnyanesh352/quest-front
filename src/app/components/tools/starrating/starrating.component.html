@@ -1,1 +1,8 @@
-<p>starrating works!</p>
+<div class="star-rating">
+    <span class="star" [class.full]="rating >= 1" (click)="setRating(1)">&#9733;</span>
+    <span class="star" [class.full]="rating >= 2" (click)="setRating(2)">&#9733;</span>
+    <span class="star" [class.full]="rating >= 3" (click)="setRating(3)">&#9733;</span>
+    <span class="star" [class.full]="rating >= 4" (click)="setRating(4)">&#9733;</span>
+    <span class="star" [class.full]="rating >= 5" (click)="setRating(5)">&#9733;</span>
+  </div>
+  

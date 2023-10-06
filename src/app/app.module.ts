@@ -34,7 +34,7 @@ import * as firebase from 'firebase/compat';
 import { environment } from 'src/environments/environment';
 import { ForgotPasswordComponent } from '../app/components/login/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './components/login/verify-email/verify-email.component';
-
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 
 @NgModule({
@@ -65,7 +65,7 @@ import { VerifyEmailComponent } from './components/login/verify-email/verify-ema
     BrowserModule,HttpClientModule,RouterModule, MatButtonModule,
     MatCheckboxModule,
     AppRoutingModule,FormsModule,ReactiveFormsModule, BrowserAnimationsModule,
-    MatButtonModule,AngularFireModule,AngularFireAuthModule,
+    MatButtonModule,AngularFireModule,AngularFireAuthModule, NgMultiSelectDropDownModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebaseConfig),
     
   ],

@@ -7,6 +7,7 @@ import { EmployeeForm } from '../alerts/model/employeeForm';
   providedIn: 'root'
 })
 export class MyserviceService {
+  companyOptions: string[] = [];
 
  
   constructor(public http:HttpClient) { }
@@ -27,6 +28,9 @@ console.log("from service");
 const headers = { 'content-type': 'application/json'}  
     return this.http.post<EmployeeForm>(this.url+"/getAllData",emp,{'headers':headers});
 
+  }
+  fetchOptionsFromService() {
+    return this.http.get<any>(this.url+"/companies");
   }
 
   getData()
