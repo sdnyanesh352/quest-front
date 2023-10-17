@@ -8,13 +8,23 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent {
+  isLoggedIn: boolean;
   constructor(private router:Router,public authService: AuthService){
 
   }
   ngOnInit(): void {}
 
   newQuestion(){
-    this.router.navigateByUrl("/qbank/addquestion")
+    this.router.navigateByUrl("/qbank/addquestion");
+
+  }
+  SignOut(){
+    this.authService.SignOut();
+    this.isLoggedIn=this.authService.isLoggedIn;
+    if(!this.isLoggedIn){
+      this.router.navigateByUrl("/sign-in");
+
+    }
 
   }
 
