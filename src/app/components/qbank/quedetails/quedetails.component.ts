@@ -10,7 +10,7 @@ import { RatingService } from 'src/app/services/rating.service';
   styleUrls: ['./quedetails.component.css']
 })
 export class QuedetailsComponent {
-  id!: any ;
+  id: any ;
   data:any;
   isQuestionsAvailable:boolean=true;
   selectedRating:number=0;

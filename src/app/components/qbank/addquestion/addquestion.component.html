@@ -1,12 +1,12 @@
 <form [formGroup]="qform" (ngSubmit)="submit()"  *ngIf="!formSubmitted" class="addQuestionClass">
   <div class="form-group">
     <label for="question">Question</label>
-    <input type="text" class="form-control" formControlName="questionid" placeholder="">
+    <input type="text" class="form-control" formControlName="question" placeholder="">
   </div>
  
   <div class="form-group">
     <label for="anser">Answer</label>
-    <textarea class="form-control" formControlName="qanswer" rows="3"></textarea>
+    <textarea class="form-control" formControlName="answer" rows="3"></textarea>
   </div>
 
  <!-- src/app/components/addquestion/addquestion.component.html -->

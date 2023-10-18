@@ -16,7 +16,7 @@ export class QserviceService {
     }),
   };
 
-  url:string="http://localhost:3000";
+  url:string="http://localhost:8083/api";
 
  
 
@@ -25,16 +25,19 @@ export class QserviceService {
   {
 console.log("from q service");
 const headers = { 'content-type': 'application/json'}  
-    return this.http.post<Qform>(this.url+"/getQuestions",que,{'headers':headers});
+    return this.http.post<Qform>(this.url+"/addquestion",que,{'headers':headers});
 
   }
   getData(): Observable<Qform[]>
   {
-    return this.http.get<Qform[]>(this.url+"/getQuestions");
+    return this.http.get<Qform[]>(this.url+"/getquestions");
   }
 
   getqdetailsById(id:string){
-    return this.http.get(this.url+"/getQuestions/"+id)
+    return this.http.get(this.url+"/qbank/quedetails/"+id)
   }
+
+
+
 
 }

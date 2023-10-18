@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { FormBuilder} from '@angular/forms';
@@ -13,22 +13,24 @@ import { Company } from '../../../alerts/model/company.model'; // Import the Com
   styleUrls: ['./addquestion.component.css']
 })
 export class AddquestionComponent {
- 
-  question!:Qform[];
   qform!:FormGroup;
   formSubmitted:boolean=false;
   selectedOption: string = ''; // Variable to store the selected option
   customCompany: string = ''; // Variable to store custom input
   companyOptions: string[] = [];
-
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+    }),
+  };
   
   constructor(private myserv:MyserviceService,  private ser:QserviceService,private formBuilder:FormBuilder,private http: HttpClient){
 
   }
   ngOnInit():void{
     this.qform = this.formBuilder.group({
-      questionid: '',
-      qanswer: '',
+      question: '',
+      answer: '',
       companyname: '',
       customCompany: ''
     });
@@ -36,15 +38,16 @@ export class AddquestionComponent {
     this.fetchCompanyOptions();
   }
   fetchCompanyOptions() {
-    const apiUrl = 'http://localhost:3000/companies';
+    const apiUrl = 'http://localhost:8083/api/companies';
 
     this.http.get<any>(apiUrl).subscribe(
       (data) => {
-        console.log(data);
+        console.log("Fetched companies "+data);
         if (data) {
           // Extract company names from the JSON file and add 'Other' as an option
           const companies: Company[] = data; // Parse companies as an array of Company
-          this.companyOptions = companies.map((company) => company.companyName);
+          this.companyOptions = companies.map((company) => company.companyname);
+
           this.companyOptions.push('Other');
         } else {
           console.error('Invalid data format received from the API.');
@@ -68,8 +71,8 @@ export class AddquestionComponent {
         const customCompany = this.qform.get('customCompany')?.value;
 
         // Make a POST request to update the JSON data
-        const apiUrl = 'http://localhost:3000/companies';
-        this.http.post(apiUrl, { companyName: customCompany }).subscribe(
+        const apiUrl = 'http://localhost:8083/api/companies';
+        this.http.post(apiUrl, { companyname: customCompany }).subscribe(
           (response) => {
             // Handle the response if needed
           },

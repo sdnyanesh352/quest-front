@@ -63,124 +63,124 @@
   ],
   "getQuestions": [
     {
-      "questionid": "what are questions",
-      "qanswer": "java and python",
+      "question": "what are questions",
+      "answer": "java and python",
       "companyname": "Terenity",
       "id": 1
     },
     {
-      "questionid": "fffffff",
-      "qanswer": "cccccccccc",
+      "question": "fffffff",
+      "answer": "cccccccccc",
       "companyname": "Terenity",
       "id": 2
     },
     {
-      "questionid": "what are the features of java 8",
-      "qanswer": "lambda expression, date calendarb api, stream api",
+      "question": "what are the features of java 8",
+      "answer": "lambda expression, date calendarb api, stream api",
       "companyname": "Siemens",
       "id": 3
     },
     {
-      "questionid": "kkkk",
-      "qanswer": "hhjfxcn ",
+      "question": "kkkk",
+      "answer": "hhjfxcn ",
       "companyname": "BNY",
       "id": 4
     },
     {
-      "questionid": "hhhd",
-      "qanswer": "zxkjnlhn",
+      "question": "hhhd",
+      "answer": "zxkjnlhn",
       "companyname": "BNY",
       "id": 5
     },
     {
-      "questionid": "what is functional interface",
-      "qanswer": "functional interface is special inteface introduced in java 8 which has only one abstract method",
+      "question": "what is functional interface",
+      "answer": "functional interface is special inteface introduced in java 8 which has only one abstract method",
       "companyname": "Siemens",
       "id": 6
     },
     {
-      "questionid": "tell me about yourself",
-      "qanswer": "i am student fresher looking for new opportunities in it field",
+      "question": "tell me about yourself",
+      "answer": "i am student fresher looking for new opportunities in it field",
       "companyname": "Other",
       "id": 7
     },
     {
-      "questionid": "explain Observables",
-      "qanswer": "Observables are objects in angular which gives o",
+      "question": "explain Observables",
+      "answer": "Observables are objects in angular which gives o",
       "companyname": "Siemens",
       "id": 8
     },
     {
-      "questionid": "are you there",
-      "qanswer": "yes",
+      "question": "are you there",
+      "answer": "yes",
       "companyname": "Terenity",
       "id": 9
     },
     {
-      "questionid": "what is your notice period",
-      "qanswer": "3 months",
+      "question": "what is your notice period",
+      "answer": "3 months",
       "companyname": "",
       "id": 10
     },
     {
-      "questionid": "",
-      "qanswer": "",
+      "question": "",
+      "answer": "",
       "companyname": "Other",
       "customCompany": "custom company",
       "id": 11
     },
     {
-      "questionid": "aaa",
-      "qanswer": "cccc",
+      "question": "aaa",
+      "answer": "cccc",
       "companyname": "Other",
       "customCompany": "rtyu",
       "id": 12
     },
     {
-      "questionid": "ddddddd",
-      "qanswer": "ssssssssss",
+      "question": "ddddddd",
+      "answer": "ssssssssss",
       "companyname": "Other",
       "customCompany": "eeeee",
       "id": 13
     },
     {
-      "questionid": "wwww",
-      "qanswer": "aaaaaaaaa",
+      "question": "wwww",
+      "answer": "aaaaaaaaa",
       "companyname": "BNY",
       "customCompany": "",
       "id": 14
     },
     {
-      "questionid": "what is your techstack",
-      "qanswer": "java mysql, angular, hibernate",
+      "question": "what is your techstack",
+      "answer": "java mysql, angular, hibernate",
       "companyname": "rest api",
       "customCompany": "rest api",
       "id": 15
     },
     {
-      "questionid": "who was father of indian navy",
-      "qanswer": "of course subka baaap ..Chatrapati",
+      "question": "who was father of indian navy",
+      "answer": "of course subka baaap ..Chatrapati",
       "companyname": "Swaraj",
       "customCompany": "Swaraj",
       "id": 16
     },
     {
-      "questionid": "who was father of indian navy",
-      "qanswer": "Shivaji maharaj",
+      "question": "who was father of indian navy",
+      "answer": "Shivaji maharaj",
       "companyname": "raje",
       "customCompany": "raje",
       "id": 17
     },
     {
-      "questionid": "ggg",
-      "qanswer": "ddd",
+      "question": "ggg",
+      "answer": "ddd",
       "companyname": "tttt",
       "customCompany": "tttt",
       "id": 18
     },
     {
-      "questionid": "tell me about react latest",
-      "qanswer": "i dont know about react",
+      "question": "tell me about react latest",
+      "answer": "i dont know about react",
       "companyname": "Google",
       "customCompany": "Google",
       "id": 19

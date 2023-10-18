@@ -18,6 +18,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 
 ## commands to test
-npm install
-json-server --watch db. json
-ng serve
+- npm install
+- json-server --watch db. json
+- ng serve
