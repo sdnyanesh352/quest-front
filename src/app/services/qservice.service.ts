@@ -33,7 +33,7 @@ const headers = { 'content-type': 'application/json'}
     return this.http.get<Qform[]>(this.url+"/getquestions");
   }
 
-  getqdetailsById(id:string){
+  getqdetailsById(id:number){
     return this.http.get(this.url+"/qbank/quedetails/"+id)
   }
 

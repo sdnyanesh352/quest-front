@@ -1,29 +1,27 @@
 <div class="qdetailsclass">
-    <div *ngIf="isQuestionsAvailable" class="qcontainer">
+    <div  class="qcontainer">
         <div>
             <button [routerLink]="['/dashboard']"> Back</button>
         </div>
     
-        <div class="questionclass">{{data.id}} ) {{data.question}}</div>
-        <div class="answerclass">Answer: {{data.answer}}</div>
-        <div><span class="badge badge-primary">{{data.companyname}}</span></div>
+        <div class="questionclass">{{currentQuestionIndex+1}} ) {{ questions[currentQuestionIndex].question }}</div>
+        <div class="answerclass">Answer: {{ questions[currentQuestionIndex].answer }}</div>
+        <div><span class="badge badge-primary">{{ questions[currentQuestionIndex].company }}</span></div>
 
         <!-- Button container -->
         <div class="button-container">
             <!-- Previous button -->
-            <button (click)="previous()" [disabled]="!isQuestionsAvailable">Previous</button>
+            <button *ngIf="isPreviousAvailable" (click)="moveToPreviousQuestion()">Previous</button>
             
             <!-- Next button -->
-            <button (click)="next()" [disabled]="!isQuestionsAvailable">Next</button>
+            <button *ngIf="isNextAvailable" (click)="next()">Next</button>
             
             <!-- Report button -->
             <button (click)="report()">Report issue</button>
         </div>
     </div>
 
-    <div *ngIf="!isQuestionsAvailable">
-        NO QUESTIONS AVAILABLE
-    </div>
+    
 
     <div>
         <div>

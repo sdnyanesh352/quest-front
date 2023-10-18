@@ -13,6 +13,9 @@ import { Company } from '../../../alerts/model/company.model'; // Import the Com
   styleUrls: ['./addquestion.component.css']
 })
 export class AddquestionComponent {
+  tags = new FormControl('');
+  tagList: string[] = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
+
   qform!:FormGroup;
   formSubmitted:boolean=false;
   selectedOption: string = ''; // Variable to store the selected option

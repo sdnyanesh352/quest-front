@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component , OnInit} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Qform } from 'src/app/alerts/model/qform';
 import { QserviceService } from 'src/app/services/qservice.service';
@@ -9,26 +10,35 @@ import { RatingService } from 'src/app/services/rating.service';
   templateUrl: './quedetails.component.html',
   styleUrls: ['./quedetails.component.css']
 })
-export class QuedetailsComponent {
-  id: any ;
+export class QuedetailsComponent implements OnInit {
+  id!: any ;
   data:any;
-  isQuestionsAvailable:boolean=true;
   selectedRating:number=0;
   istoReported:boolean=false;
   userRating: number = 0;
+  questions: Qform[] = [];
+  currentQuestionIndex = 0;
+  isNextAvailable:boolean=true;
+  isPreviousAvailable:boolean=false;
 
-  constructor(private router:ActivatedRoute, private qservice:QserviceService,private route:Router,private ratingService: RatingService){
+  constructor(private http:HttpClient,  private router:ActivatedRoute, private qservice:QserviceService,private route:Router,private ratingService: RatingService){
     this.id= this.router.snapshot.paramMap.get('id');
-
     this.loadDataById(this.id);
+  }
+  ngOnInit(): void {
+   this.qservice.getData().subscribe((allquestions)=>{
+    this.questions=allquestions;
+    console.log("All Questions : "+this.questions);
+   })
 
   }
+  
    //this function needs improvement when out of index
-  previous(){
+/*   previous(){
     this.id= this.router.snapshot.paramMap.get('id');
     var previousId=parseInt(this.id)-1;
     this.route.navigateByUrl("/qbank/quedetails/"+previousId)
-    this.qservice.getqdetailsById(String(previousId)).subscribe((qform)=>{
+    this.qservice.getqdetailsById(previousId).subscribe((qform)=>{
       if(!(this.id)==(this.data.id)){
         this.isQuestionsAvailable=false;
 console.error("Thats it!!!");
@@ -36,14 +46,14 @@ console.error("Thats it!!!");
       //this.data=JSON.stringify(qform);
       this.data=qform;
     })
-  }
+  } */
 
   //this function needs improvement when out of index
-  next(){
+ /*  next(){
     this.id= this.router.snapshot.paramMap.get('id');
     var nextId=parseInt(this.id)+1;
     this.route.navigateByUrl("/qbank/quedetails/"+nextId)
-    this.qservice.getqdetailsById(String(nextId)).subscribe((qform)=>{
+    this.qservice.getqdetailsById(nextId).subscribe((qform)=>{
       if(!(this.id)==(this.data.id)){
         this.isQuestionsAvailable=false;
 console.error("Thats it!!!");
@@ -52,9 +62,38 @@ console.error("Thats it!!!");
       this.data=qform;
     })
       
+  } */
+previous(){
+  if ((this.currentQuestionIndex > 0)) {
+    this.currentQuestionIndex--;
+    this.isNextAvailable=true;
+  } else {
+    // Handle the case when you reach the end of the list.
+    // You can choose to wrap back to the beginning or do something else.
+    console.log("End of questions reached.");
+    this.isPreviousAvailable=false;
   }
+}
+moveToPreviousQuestion() {
+  this.previous(); // Move to the previous question
+  const currentQuestion = this.questions[this.currentQuestionIndex];
+  console.log("Current Question:", currentQuestion);
+}
+  
+next(){
+  if (this.currentQuestionIndex < this.questions.length - 1) {
+    this.currentQuestionIndex++;
+    this.isPreviousAvailable=true;
+  } else {
+    // Handle the case when you reach the end of the list.
+    // You can choose to wrap back to the beginning or do something else.
+    console.log("End of questions reached.");
+    this.isNextAvailable=false;
+  }
+}
+
   loadDataById(id:string){
-    this.qservice.getqdetailsById(id).subscribe((qform)=>{
+    this.qservice.getqdetailsById(Number(id)).subscribe((qform)=>{
       //this.data=JSON.stringify(qform);
       this.id=id;
       this.data=qform;
