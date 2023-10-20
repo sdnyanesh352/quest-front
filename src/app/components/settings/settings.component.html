@@ -1,0 +1,39 @@
+<table mat-table [dataSource]="modData">
+
+    <ng-container matColumnDef="icon">
+  
+      <th mat-header-cell *matHeaderCellDef> Icon </th>
+  
+      <td mat-cell *matCellDef="let element"> <i class="{{element.icon}}"></i> </td>
+  
+    </ng-container>
+  
+       <ng-container matColumnDef="pluginName">
+  
+      <th mat-header-cell *matHeaderCellDef> Plugin Name </th>
+  
+      <td mat-cell *matCellDef="let element"> {{element.pluginName}} </td>
+  
+    </ng-container>
+  
+   
+  
+    <ng-container matColumnDef="isActive">
+  
+      <th mat-header-cell *matHeaderCellDef> Active </th>
+  
+      <td mat-cell *matCellDef="let element">
+        
+        <mat-slide-toggle [(ngModel)]="element.isActive"></mat-slide-toggle>
+  
+      </td>
+  
+    </ng-container>
+  
+   
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+  </table>

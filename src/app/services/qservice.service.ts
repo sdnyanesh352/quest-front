@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Qform } from '../alerts/model/qform';
+import { Qform } from '../model/qform';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
@@ -17,6 +17,8 @@ export class QserviceService {
   };
 
   url:string="http://localhost:8083/api";
+  //url:string="http://localhost:3000/getquestions"
+  //if using db.json file
 
  
 

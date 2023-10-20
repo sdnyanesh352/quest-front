@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
-import { EmployeeForm } from '../alerts/model/employeeForm';
+import { EmployeeForm } from '../model/employeeForm';
 
 
 @Injectable({

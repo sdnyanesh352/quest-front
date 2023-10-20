@@ -36,6 +36,12 @@ import { ForgotPasswordComponent } from '../app/components/login/forgot-password
 import { VerifyEmailComponent } from './components/login/verify-email/verify-email.component';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import {MaterialModule} from './material/material.module';
+import { ProfileComponent } from './components/profile/profile.component';
+import { SettingsComponent } from './components/settings/settings.component';
+import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
+import { BodyComponent } from './components/body/body.component';
+import { QuizplayerComponent } from './components/quizplayer/quizplayer.component';
+import { QuizComponent } from './components/quiz/quiz.component';
 
 
 @NgModule({
@@ -60,7 +66,13 @@ import {MaterialModule} from './material/material.module';
     SigupComponent,
     LoginComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    ProfileComponent,
+    SettingsComponent,
+    SidemenuComponent,
+    BodyComponent,
+    QuizplayerComponent,
+    QuizComponent
   ],
   imports: [
     BrowserModule,HttpClientModule,RouterModule, MatButtonModule,

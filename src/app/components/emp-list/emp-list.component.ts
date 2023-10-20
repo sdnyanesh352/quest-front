@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmployeeForm } from '../../alerts/model/employeeForm';
+import { EmployeeForm } from '../../model/employeeForm';
 import { MyserviceService} from '../../services/myservice.service';
 
 @Component({

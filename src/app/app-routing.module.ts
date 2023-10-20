@@ -12,15 +12,25 @@ import { LoginComponent } from './components/login/login/login.component';
 import { ForgotPasswordComponent } from './components/login/forgot-password/forgot-password.component';
 import { VerifyEmailComponent } from './components/login/verify-email/verify-email.component';
 import { AuthGuard } from './shared/guard/auth.guard';
+import { ProfileComponent } from './components/profile/profile.component';
+import { QlistComponent } from './components/qbank/qlist/qlist.component';
+import { SettingsComponent } from './components/settings/settings.component';
+import { QuizplayerComponent } from './components/quizplayer/quizplayer.component';
+import { QuizComponent } from './components/quiz/quiz.component';
 const routes: Routes = [
-
-  {path:"",component:HomeComponent},
+ {path: "", redirectTo: 'home', pathMatch: 'full'},
+  {path:"home",component:HomeComponent},
+  {path:"setting",component:SettingsComponent},
+  {path:"profile",component:ProfileComponent},
   {path:"contactUs",component:ContactUsComponent},
   {path:"assignment",component:AssignmentComponent},
+  {path:'questionList', component:QlistComponent},
   {path:"assignment01",component:Forms2509dComponent},
   {path:"dashboard",component:DashboardComponent, canActivate: [AuthGuard]},
   {path:"qbank/addquestion",component:AddquestionComponent},
+  {path:"quizplayer",component:QuizplayerComponent},
   {path:"qbank/quedetails/:id",component:QuedetailsComponent},
+  {path:"quiz/:id",component:QuizComponent},
   {path:'register-user',component:SigupComponent},
   {path:'sign-in',component:LoginComponent},
   { path: 'forgot-password', component: ForgotPasswordComponent },

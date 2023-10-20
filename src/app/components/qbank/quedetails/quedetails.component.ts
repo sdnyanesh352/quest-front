@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component , OnInit} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Qform } from 'src/app/alerts/model/qform';
+import { Qform } from 'src/app/model/qform';
 import { QserviceService } from 'src/app/services/qservice.service';
 import { RatingService } from 'src/app/services/rating.service';
 
@@ -10,28 +10,23 @@ import { RatingService } from 'src/app/services/rating.service';
   templateUrl: './quedetails.component.html',
   styleUrls: ['./quedetails.component.css']
 })
-export class QuedetailsComponent implements OnInit {
-  id!: any ;
+export class QuedetailsComponent  {
+  id!: number ;
   data:any;
   selectedRating:number=0;
   istoReported:boolean=false;
   userRating: number = 0;
-  questions: Qform[] = [];
+  question: Qform;
   currentQuestionIndex = 0;
   isNextAvailable:boolean=true;
   isPreviousAvailable:boolean=false;
 
   constructor(private http:HttpClient,  private router:ActivatedRoute, private qservice:QserviceService,private route:Router,private ratingService: RatingService){
-    this.id= this.router.snapshot.paramMap.get('id');
-    this.loadDataById(this.id);
+    this.id= Number(this.router.snapshot.paramMap.get('id'));
+     this.loadDataById(this.id);
   }
-  ngOnInit(): void {
-   this.qservice.getData().subscribe((allquestions)=>{
-    this.questions=allquestions;
-    console.log("All Questions : "+this.questions);
-   })
 
-  }
+ 
   
    //this function needs improvement when out of index
 /*   previous(){
@@ -63,7 +58,7 @@ console.error("Thats it!!!");
     })
       
   } */
-previous(){
+/* previous(){
   if ((this.currentQuestionIndex > 0)) {
     this.currentQuestionIndex--;
     this.isNextAvailable=true;
@@ -90,13 +85,14 @@ next(){
     console.log("End of questions reached.");
     this.isNextAvailable=false;
   }
-}
+} */
 
-  loadDataById(id:string){
-    this.qservice.getqdetailsById(Number(id)).subscribe((qform)=>{
+  loadDataById(id:number){
+    this.qservice.getqdetailsById(id).subscribe((qform)=>{
       //this.data=JSON.stringify(qform);
       this.id=id;
       this.data=qform;
+      console.log("Its Called"+JSON.stringify(this.data));
     })
   }
 report(){
@@ -112,21 +108,5 @@ this.istoReported=true;
 
   return average;
 }
-saveRating() {
-  this.id= this.router.snapshot.paramMap.get('id');
-  this.ratingService.saveRating(this.id, this.userRating)
-    .subscribe(response => {
-      // Handle the response from the server if needed
-      console.log('Rating saved:', response);
-    });
-}
-getRatings() {
-  this.ratingService.getRatings(this.id)
-    .subscribe(ratings => {
-      // Use the ratings data, and calculate average if needed
-      const averageRating = this.ratingService.calculateAverageRating(ratings);
-    });
-  }
-
 
 }

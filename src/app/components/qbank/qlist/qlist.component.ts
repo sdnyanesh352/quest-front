@@ -1,7 +1,6 @@
-import { HttpHeaders } from '@angular/common/http';
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { Qform } from 'src/app/alerts/model/qform';
+import { Qform } from 'src/app/model/qform';
 import { QserviceService } from 'src/app/services/qservice.service';
 
 @Component({
@@ -12,11 +11,6 @@ import { QserviceService } from 'src/app/services/qservice.service';
 export class QlistComponent {
   data: any;
   @Input() qform!:Qform;
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-    }),
-  };
   constructor(private qservice:QserviceService,private router:Router){
 this.qservice.getData().subscribe((data)=>{
   this.data=data;

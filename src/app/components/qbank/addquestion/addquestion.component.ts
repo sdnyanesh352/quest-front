@@ -2,10 +2,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { FormBuilder} from '@angular/forms';
-import { Qform } from 'src/app/alerts/model/qform';
+import { Qform } from 'src/app/model/qform';
 import { MyserviceService } from 'src/app/services/myservice.service';
 import { QserviceService } from 'src/app/services/qservice.service';
-import { Company } from '../../../alerts/model/company.model'; // Import the Company model
+import { Company } from '../../../model/company.model'; // Import the Company model
 
 @Component({
   selector: 'app-addquestion',
@@ -14,7 +14,7 @@ import { Company } from '../../../alerts/model/company.model'; // Import the Com
 })
 export class AddquestionComponent {
   tags = new FormControl('');
-  tagList: string[] = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
+  tagList: string[] = ['easy', 'hard', 'medium', 'abusive'];
 
   qform!:FormGroup;
   formSubmitted:boolean=false;

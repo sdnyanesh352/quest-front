@@ -61,129 +61,730 @@
       "id": 7
     }
   ],
-  "getQuestions": [
+  "getquestions": [
+
     {
-      "question": "what are questions",
-      "answer": "java and python",
-      "companyname": "Terenity",
-      "id": 1
+
+        "question": "What are questions",
+
+        "answer": "Java and Python",
+
+        "companyname": "Terenity",
+
+        "id": 1
+
     },
+
     {
-      "question": "fffffff",
-      "answer": "cccccccccc",
-      "companyname": "Terenity",
-      "id": 2
+
+        "question": "What is serialization?",
+
+        "answer": "Serialization is the process of converting an object into a format that can be easily stored or transmitted. It is commonly used in Java for data persistence and network communication.",
+
+        "companyname": "Terenity",
+
+        "id": 2
+
     },
+
     {
-      "question": "what are the features of java 8",
-      "answer": "lambda expression, date calendarb api, stream api",
-      "companyname": "Siemens",
-      "id": 3
+
+        "question": "How to achieve serialization?",
+
+        "answer": "In Java, serialization is achieved by implementing the Serializable interface and using ObjectOutputStream to write objects to a stream. The objects can later be deserialized using ObjectInputStream.",
+
+        "companyname": "Terenity",
+
+        "id": 3
+
     },
+
     {
-      "question": "kkkk",
-      "answer": "hhjfxcn ",
-      "companyname": "BNY",
-      "id": 4
+
+        "question": "What is the difference between Hashtable and ConcurrentHashMap?",
+
+        "answer": "Hashtable is a synchronized collection, whereas ConcurrentHashMap is a concurrent collection. ConcurrentHashMap allows multiple threads to read and write concurrently without locking the entire collection, providing better performance in multi-threaded environments.",
+
+        "companyname": "Terenity",
+
+        "id": 4
+
     },
+
     {
-      "question": "hhhd",
-      "answer": "zxkjnlhn",
-      "companyname": "BNY",
-      "id": 5
+
+        "question": "What is synchronization?",
+
+        "answer": "Synchronization in Java is the process of controlling access to shared resources or critical sections of code to ensure that only one thread can access them at a time. It prevents data corruption and race conditions in multi-threaded applications.",
+
+        "companyname": "Terenity",
+
+        "id": 5
+
     },
+
     {
-      "question": "what is functional interface",
-      "answer": "functional interface is special inteface introduced in java 8 which has only one abstract method",
-      "companyname": "Siemens",
-      "id": 6
+
+        "question": "How to handle transactions in a table?",
+
+        "answer": "Transactions in a database table can be managed using SQL commands like BEGIN, COMMIT, and ROLLBACK. These commands ensure that a series of database operations are either all completed successfully or none at all, providing data integrity.",
+
+        "companyname": "Terenity",
+
+        "id": 6
+
     },
+
     {
-      "question": "tell me about yourself",
-      "answer": "i am student fresher looking for new opportunities in it field",
-      "companyname": "Other",
-      "id": 7
+
+        "question": "How to connect Spring Boot to a database?",
+
+"answer": "Spring Boot can connect to a database by configuring data source properties in the application.properties or application.yml file. You can use the Spring Data JPA or JDBC template to interact with the database.",
+
+        "companyname": "Terenity",
+
+        "id": 7
+
     },
+
     {
-      "question": "explain Observables",
-      "answer": "Observables are objects in angular which gives o",
-      "companyname": "Siemens",
-      "id": 8
+
+        "question": "What are the requirements to use JPA?",
+
+        "answer": "To use JPA (Java Persistence API), you need to define a persistence.xml file, create entity classes, configure a data source, and specify the JPA implementation in your project. It's commonly used with Hibernate or EclipseLink.",
+
+        "companyname": "Terenity",
+
+        "id": 8
+
     },
+
     {
-      "question": "are you there",
-      "answer": "yes",
-      "companyname": "Terenity",
-      "id": 9
+
+        "question": "How to write a lambda expression using a functional interface?",
+
+        "answer": "Lambda expressions in Java are used with functional interfaces. You can define a lambda expression by specifying the input parameters and the code to be executed. For example: (a, b) -> a + b.",
+
+        "companyname": "Terenity",
+
+        "id": 9
+
     },
+
     {
-      "question": "what is your notice period",
-      "answer": "3 months",
-      "companyname": "",
-      "id": 10
+
+        "question": "What is the difference between ConcurrentHashMap and HashMap?",
+
+        "answer": "ConcurrentHashMap is a thread-safe alternative to HashMap that allows concurrent read and write operations without locking the entire collection. It's suitable for multi-threaded applications. HashMap is not thread-safe and can lead to concurrent modification issues.",
+
+        "companyname": "Terenity",
+
+        "id": 10
+
     },
+
+
     {
-      "question": "",
-      "answer": "",
-      "companyname": "Other",
-      "customCompany": "custom company",
-      "id": 11
+
+        "question": "Collection Serialization",
+
+        "answer": "Collection Serialization refers to the process of converting a collection of objects, such as ArrayList or HashMap, into a format that can be easily stored or transmitted. This is often used in Java for data persistence and network communication.",
+
+        "companyname": "Terenity",
+
+        "id": 11
+
     },
+
     {
-      "question": "aaa",
-      "answer": "cccc",
-      "companyname": "Other",
-      "customCompany": "rtyu",
-      "id": 12
+
+        "question": "Java 8 Exception Handling",
+
+        "answer": "Java 8 introduced improved exception handling with the addition of the 'try-with-resources' statement and enhancements to the 'catch' clause. These features make it easier to manage resources and handle exceptions.",
+
+        "companyname": "Terenity",
+
+        "id": 12
+
     },
+
     {
-      "question": "ddddddd",
-      "answer": "ssssssssss",
-      "companyname": "Other",
-      "customCompany": "eeeee",
-      "id": 13
+
+        "question": "Threading",
+
+        "answer": "Threading in Java involves the use of threads to achieve concurrent execution. It allows multiple tasks to run simultaneously, improving the efficiency of applications. Java provides the 'Thread' class and the 'Runnable' interface for multithreading.",
+
+        "companyname": "Terenity",
+
+        "id": 13
+
     },
+
     {
-      "question": "wwww",
-      "answer": "aaaaaaaaa",
-      "companyname": "BNY",
-      "customCompany": "",
-      "id": 14
+
+        "question": "General Programs before Java 8",
+
+        "answer": "General programs in Java prior to Java 8 typically involved traditional programming constructs such as loops, conditionals, and method calls. Java 8 introduced functional programming features like lambda expressions and the Stream API.",
+
+        "companyname": "Terenity",
+
+        "id": 14
+
     },
+
     {
-      "question": "what is your techstack",
-      "answer": "java mysql, angular, hibernate",
-      "companyname": "rest api",
-      "customCompany": "rest api",
-      "id": 15
+
+        "question": "Spring Boot Annotation",
+
+        "answer": "Spring Boot annotations are used to configure and customize Spring Boot applications. Common annotations include '@SpringBootApplication', '@RestController', '@RequestMapping', and many others that simplify application development.",
+
+        "companyname": "Terenity",
+
+        "id": 15
+
     },
+
     {
-      "question": "who was father of indian navy",
-      "answer": "of course subka baaap ..Chatrapati",
-      "companyname": "Swaraj",
-      "customCompany": "Swaraj",
-      "id": 16
+
+        "question": "JWT",
+
+        "answer": "JWT, or JSON Web Token, is a compact, self-contained means for securely transmitting information between parties as a JSON object. It is commonly used for authentication and authorization in web applications.",
+
+        "companyname": "Terenity",
+
+        "id": 16
+
     },
+
     {
-      "question": "who was father of indian navy",
-      "answer": "Shivaji maharaj",
-      "companyname": "raje",
-      "customCompany": "raje",
-      "id": 17
+
+        "question": "Synchronized map vs. concurrent HashMap",
+
+        "answer": "Synchronized maps use explicit synchronization to make the map thread-safe, which can lead to performance bottlenecks. ConcurrentHashMap, on the other hand, is designed to handle concurrent operations efficiently without locking the entire map.",
+
+        "companyname": "Terenity",
+
+        "id": 17
+
     },
+
     {
-      "question": "ggg",
-      "answer": "ddd",
-      "companyname": "tttt",
-      "customCompany": "tttt",
-      "id": 18
+
+        "question": "Internal working of AWS Lambda",
+
+        "answer": "AWS Lambda is a serverless compute service. It works by executing code in response to various triggers without requiring the user to manage servers. AWS Lambda automatically scales and manages the infrastructure.",
+
+        "companyname": "Terenity",
+
+        "id": 18
+
     },
+
     {
-      "question": "tell me about react latest",
-      "answer": "i dont know about react",
-      "companyname": "Google",
-      "customCompany": "Google",
-      "id": 19
+
+        "question": "Working of AWS Cloud",
+
+        "answer": "AWS (Amazon Web Services) Cloud is a collection of cloud computing services. It provides scalable and on-demand computing resources, storage, and other services. AWS offers various tools and services for cloud infrastructure and application deployment.",
+
+        "companyname": "Terenity",
+
+        "id": 19
+
+    },
+
+    {
+
+        "question": "Adapter Factory Design Pattern",
+
+        "answer": "The Adapter Factory Design Pattern is used to create instances of adapter classes. It allows you to adapt one interface to another by providing a factory method to create these adapters. It's commonly used in scenarios where you need to make two incompatible interfaces work together.",
+
+        "companyname": "Terenity",
+
+        "id": 20
+
+    },
+
+    {
+
+        "question": "Serialization vs. Deserialization",
+
+        "answer": "Serialization is the process of converting an object into a format that can be easily stored or transmitted. Deserialization is the reverse process of converting the serialized format back into an object. Both are used for data storage and transmission.",
+
+        "companyname": "Terenity",
+
+        "id": 21
+
+    },
+
+    {
+
+        "question": "Inheritance with Exception Handling",
+
+        "answer": "Inheritance in Java allows a subclass to inherit the properties and behaviors of its superclass. When it comes to exception handling, a subclass can override or add exception specifications to the methods it inherits from the superclass.",
+
+        "companyname": "Terenity",
+
+        "id": 22
+
+    },
+
+    {
+
+        "question": "Java 8 Memory Model",
+
+        "answer": "The Java 8 Memory Model defines how threads interact with memory. It introduces the concept of 'Happens-Before' to establish the order of memory access and synchronization actions in multi-threaded applications.",
+
+        "companyname": "Terenity",
+
+        "id": 23
+
+    },
+
+    {
+
+        "question": "@Qualifier Annotation",
+
+        "answer": "@Qualifier is used in Spring to disambiguate between beans of the same type when there are multiple candidates. It specifies which bean to inject by providing the name or value associated with the desired bean.",
+
+        "companyname": "Terenity",
+
+        "id": 24
+
+    },
+
+    {
+
+        "question": "Spring Security",
+
+        "answer": "Spring Security is a framework for handling authentication and authorization in Java applications. It provides features like user authentication, role-based access control, and protection against common security threats.",
+
+        "companyname": "Terenity",
+
+        "id": 25
+
+    },
+
+    {
+
+        "question": "Spring Bean Life Cycle",
+
+        "answer": "Spring beans go through a lifecycle consisting of instantiation, population of properties, initialization, use, and destruction. The Spring container manages this lifecycle, and you can implement custom initialization and destruction methods.",
+
+        "companyname": "Terenity",
+
+        "id": 26
+
+    },
+
+    {
+
+        "question": "Singleton Class vs. Singleton Scope Bean",
+
+        "answer": "A Singleton class in Java ensures that only one instance of the class is created. In Spring, a Singleton Scope Bean is a bean defined in the Spring container with a single instance shared across the entire application. Both concepts aim to have a single instance.",
+
+        "companyname": "Terenity",
+
+        "id": 27
+
+    },
+
+    {
+
+        "question": "Find the 2nd largest element optimize way",
+
+        "answer": "To find the 2nd largest element in an array, you can use a single pass algorithm. Initialize two variables to track the largest and second-largest values. Traverse the array once, updating these variables as you go.",
+
+        "companyname": "Terenity",
+
+        "id": 28
+
+    },
+
+    {
+
+        "question": "Exact output Java program",
+
+        "answer": "To provide the exact output of a Java program, I would need the specific code or program you're referring to. Java programs can have a wide range of output depending on the code logic.",
+
+        "companyname": "Terenity",
+
+        "id": 29
+
+    },
+
+{
+
+        "question": "Put a filter",
+
+        "answer": "To put a filter in a Java application, you can implement a custom filter by extending the `javax.servlet.Filter` interface. Filters can be used to intercept and modify incoming requests or outgoing responses in a web application.",
+
+        "companyname": "Terenity",
+
+        "id": 30
+
+    },
+
+    {
+
+        "question": "Thread Synchronization: Method vs. Block",
+
+        "answer": "Thread synchronization can be achieved both at the method level and within a specific block of code using the 'synchronized' keyword. Using synchronized methods synchronizes access to the entire method, while synchronized blocks allow you to specify a particular section of code to be synchronized.",
+
+        "companyname": "Terenity",
+
+        "id": 31
+
+    },
+
+    {
+
+        "question": "Serialization and Deserialization in Java",
+
+        "answer": "Serialization is the process of converting an object into a byte stream to store it in a file or transmit it over a network. Deserialization is the reverse process, where the byte stream is converted back into an object. In Java, you can achieve this using the 'Serializable' interface and 'ObjectInputStream' and 'ObjectOutputStream' classes.",
+
+        "companyname": "Terenity",
+
+        "id": 32
+
+    },
+
+    {
+
+        "question": "Java 8: Sort list by name",
+
+        "answer": "In Java 8, you can sort a list of objects by a property, such as 'name,' using the Stream API. You can use the 'Comparator' and 'sorted' methods to achieve this. For example: 'list.stream().sorted(Comparator.comparing(Object::getName)).collect(Collectors.toList())'.",
+
+        "companyname": "Terenity",
+
+        "id": 33
+
+    },
+
+    {
+
+        "question": "@Async annotation of Spring Boot",
+
+        "answer": "The '@Async' annotation in Spring Boot is used to indicate that a method should be executed asynchronously in a separate thread. It is often used to improve the responsiveness of a Spring Boot application by running time-consuming tasks in the background.",
+
+        "companyname": "Terenity",
+
+        "id": 34
+
+    },
+
+    {
+
+        "question": "Spring Cloud Config",
+
+        "answer": "Spring Cloud Config is a module within the Spring Cloud framework that provides centralized external configuration management for distributed systems. It allows you to store and manage configuration files that can be accessed by multiple microservices.",
+
+        "companyname": "Terenity",
+
+        "id": 35
+
+    },
+
+    {
+
+        "question": "POST API and Explain Annotation",
+
+        "answer": "A POST API is used to create or update resources on the server. Annotations in Spring, such as '@RequestMapping' or '@PostMapping', are used to map HTTP requests to specific methods in a controller. They define the URL and HTTP method that triggers the method's execution.",
+
+        "companyname": "Terenity",
+
+        "id": 36
+
+    },
+
+    {
+
+        "question": "Builder Pattern and Code of Singleton Class",
+
+        "answer": "The Builder Pattern is a creational design pattern used to construct complex objects by separating the construction process from the object's representation. A Singleton Class ensures a single instance of the class exists. To combine them, you can implement a builder for the Singleton class.",
+
+        "companyname": "Terenity",
+
+        "id": 37
+
+    },
+
+    {
+
+        "question": "Micro-Service Architecture",
+
+        "answer": "Microservice architecture is an architectural style that structures an application as a collection of small, independent services. These services are loosely coupled, independently deployable, and communicate via APIs. It promotes scalability, maintainability, and flexibility.",
+
+        "companyname": "Terenity",
+
+        "id": 38
+
+    },
+
+    {
+
+        "question": "JPA Interfaces and @Query Annotation",
+
+        "answer": "JPA (Java Persistence API) provides interfaces like 'JpaRepository' and 'CrudRepository' for database operations. The '@Query' annotation allows you to define custom SQL or JPQL queries for specific repository methods in Spring Data JPA.",
+
+        "companyname": "Terenity",
+
+        "id": 39
+
+    },
+
+    {
+
+        "question": "@Autowired Alternative",
+
+        "answer": "In Spring, '@Autowired' is used for dependency injection. An alternative is to use constructor injection, where you create a constructor that accepts the dependencies as parameters, reducing the need for field-level injection.",
+
+        "companyname": "Terenity",
+
+        "id": 40
+
+    },
+
+    {
+
+        "question": "SQL Group By Query with Example",
+
+        "answer": "The 'GROUP BY' clause in SQL is used to group rows that have the same values in specified columns. For example, 'SELECT department, AVG(salary) FROM employees GROUP BY department' calculates the average salary for each department.",
+
+        "companyname": "Terenity",
+
+        "id": 41
+
+    },
+
+    {
+
+        "question": "SQL Index Types",
+
+        "answer": "SQL indexes are used to improve query performance. Common types include B-tree indexes, Hash indexes, and Bitmap indexes. They provide faster data retrieval by reducing the number of rows that need to be scanned.",
+
+        "companyname": "Terenity",
+
+        "id": 42
+
+    },
+
+    {
+
+        "question": "@Configuration Annotation, @Component Annotation, @Bean, @Qualifier, @ExceptionHandler, @Value",
+
+        "answer": "In Spring, '@Configuration' is used to define Java-based configuration. '@Component' marks a class as a Spring-managed component. '@Bean' is used to define a bean in a configuration class. '@Qualifier' specifies which bean to inject. '@ExceptionHandler' handles exceptions. '@Value' injects values from property files.",
+
+        "companyname": "Terenity",
+
+        "id": 43
+
+    },
+
+    {
+
+        "question": "Session Factory vs. Session",
+
+        "answer": "In Hibernate, the Session Factory is a factory for creating Sessions, which are used for database operations. The Session Factory is typically a long-lived object that is thread-safe and shared among all application threads. Sessions are short-lived and not thread-safe.",
+
+        "companyname": "Terenity",
+
+        "id": 44
+
+    },
+
+    {
+
+        "question": "Code and Output of Interface Inheritance",
+
+        "answer": "In the provided code, the 'Parent' interface defines the 'sayHi' method, and the 'Child' interface extends 'Parent' and adds the 'sayNo' method. This code is valid, and a class implementing 'Child' must provide implementations for both 'sayHi' and 'sayNo'.",
+
+        "companyname": "Terenity",
+
+        "id": 45
+
+    },
+
+    {
+
+        "question": "Global Exception Rest API Flow",
+
+        "answer": "In a REST API, global exceptions can be handled using exception handling mechanisms like 'ControllerAdvice' and 'ExceptionHandler' in Spring. When an exception occurs, the global exception handler can capture it and return an appropriate response to the client.",
+
+        "companyname": "Terenity",
+
+        "id": 46
+
+    },
+
+
+    {
+
+        "question": "Java 8 Programs",
+
+        "answer": "Java 8 introduced several programming features, including lambda expressions, the Stream API, default methods in interfaces, and the 'java.time' package for handling date and time. Java 8 programs often leverage these features for more concise and efficient code.",
+
+        "companyname": "Terenity",
+
+        "id": 47
+
+    },
+
+    {
+
+        "question": "Threading - Executor Framework, etc.",
+
+        "answer": "Threading in Java involves using the 'Executor' framework for managing and executing tasks asynchronously. Executors simplify the management of thread creation and execution. Thread pools, 'Callable' tasks, and 'Future' objects are commonly used in this context.",
+
+        "companyname": "Terenity",
+
+        "id": 48
+
+    },
+
+    {
+
+        "question": "Synchronization",
+
+        "answer": "Synchronization in Java is the process of controlling access to shared resources or critical sections of code to ensure that only one thread can access them at a time. It prevents data corruption and race conditions in multi-threaded applications.",
+
+        "companyname": "Terenity",
+
+        "id": 49
+
+    },
+
+    {
+
+        "question": "Collection",
+
+        "answer": "Collections in Java are used to store and manage groups of objects. The Java Collections Framework provides a wide range of data structures, including lists, sets, maps, and queues, along with various utility classes and interfaces.",
+
+        "companyname": "Terenity",
+
+        "id": 50
+
+    },
+
+    {
+
+        "question": "Comparator",
+
+        "answer": "The 'Comparator' interface in Java is used for comparing objects. It allows you to define custom sorting orders for objects in collections. You can implement 'Comparator' to specify how objects should be compared.",
+
+        "companyname": "Terenity",
+
+        "id": 51
+
+    },
+
+    {
+
+        "question": "Spring Boot Flow & Annotation",
+
+        "answer": "Spring Boot simplifies the development of production-ready applications. It follows the convention-over-configuration approach, and annotations play a significant role in configuring components, defining endpoints, and managing the application's flow.",
+
+        "companyname": "Terenity",
+
+        "id": 52
+
+    },
+
+    {
+
+        "question": "Oops Concept: Abstraction, Polymorphism",
+
+        "answer": "Abstraction is one of the core principles of object-oriented programming (OOP) that allows you to hide complex implementation details and provide a simplified interface. Polymorphism enables objects of different types to be treated as objects of a common superclass, enhancing flexibility and extensibility.",
+
+        "companyname": "Terenity",
+
+        "id": 53
+
+    },
+
+    {
+
+        "question": "Write a program to find the N-th Highest Salary in the int[] array",
+
+        "answer": "To find the N-th highest salary in an int array, you can sort the array in descending order and then access the element at index N-1. For example, if N is 2, the code would be 'Arrays.sort(array, Collections.reverseOrder()); int nthHighest = array[N - 1];'.",
+
+        "companyname": "Terenity",
+
+        "id": 54
+
+    },
+
+    {
+
+        "question": "Write a program for Fibonacci Series",
+
+        "answer": "The Fibonacci series is a sequence where each number is the sum of the two preceding ones, starting from 0 and 1. You can implement it using a loop or recursion. For example, a recursive Java function might look like this:\n\n```\npublic int fibonacci(int n) {\n  if (n <= 1) return n;\n  return fibonacci(n - 1) + fibonacci(n - 2);\n}\n```",
+
+        "companyname": "Terenity",
+
+        "id": 55
+
+    },
+
+    {
+
+        "question": "Differences between Hashtable and ConcurrentHashMap",
+
+        "answer": "Both Hashtable and ConcurrentHashMap are used for mapping keys to values. However, Hashtable is synchronized, while ConcurrentHashMap uses fine-grained locking, allowing multiple threads to read and write concurrently without blocking each other.",
+
+        "companyname": "Terenity",
+
+        "id": 56
+
+    },
+
+    {
+
+        "question": "Which collection gives all the data in natural sorting order?",
+
+        "answer": "The 'TreeSet' collection in Java gives data in natural sorting order. It uses a Red-Black Tree data structure to maintain elements in sorted order. When you add elements to a 'TreeSet', they are automatically sorted.",
+
+        "companyname": "Terenity",
+
+        "id": 57
+
+    },
+
+    {
+
+        "question": "OOP Concepts: Inheritance, Polymorphism, Abstraction, Encapsulation",
+
+        "answer": "Inheritance allows one class to inherit properties and behaviors from another. Polymorphism enables objects of different types to be treated as objects of a common superclass. Abstraction hides complex implementation details. Encapsulation bundles data and methods that operate on that data into a single unit.",
+
+        "companyname": "Terenity",
+
+        "id": 58
+
+    },
+
+    {
+
+        "question": "Abstract Classes: Constructor and Instance Variables",
+
+        "answer": "Abstract classes can have constructors, and they can also have instance variables. Abstract classes are used to define common properties and methods for a group of related classes. They cannot be instantiated on their own and require subclasses to provide concrete implementations.",
+
+        "companyname": "Terenity",
+
+        "id": 59
+
+    },
+
+    {
+
+        "question": "Hibernate Mappings with Examples",
+
+        "answer": "Hibernate is an Object-Relational Mapping (ORM) framework that maps Java objects to database tables. Mappings define the relationships between Java classes and database tables. Common mappings include @Entity, @OneToMany, @ManyToOne, @OneToOne, and @ManyToMany.",
+
+        "companyname": "Terenity",
+
+        "id": 60
+
     }
-  ]
+
+]
+
 }
