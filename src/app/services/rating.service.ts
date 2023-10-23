@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class RatingService {
   private baseUrl = 'http://localhost:8083/api'; // Replace with your backend API URL
+  qform: Observable<Object>;
   
   constructor(private http: HttpClient) {}
   httpOptions = {
@@ -20,14 +21,23 @@ export class RatingService {
 
     const url = `${this.baseUrl}/ratings/${questionId}/${rating}`; // Update with your API endpoint
   
-  return this.http.post(url, null,this.httpOptions);
+  return this.http.patch(url, null,this.httpOptions);
   
   }
 
   // Retrieve ratings for a question
-  getRatings(questionId: number): Observable<any> {
-    const url = `${this.baseUrl}/ratings/${questionId}`; // Replace with your API endpoint
+  getRatings(id: number): Observable<any> {
+    this.http.get(this.baseUrl+"/qbank/quedetails/"+id).subscribe((rating)=>{
+      const rata= rating;
+      console.log("ratings are "+JSON.stringify(rata));
+    }
+    )
+    const url = `${this.baseUrl}/ratings/${id}`; // Replace with your API endpoint
     return this.http.get(url);
+  }
+
+  getqdetailsById(id:number){
+    return this.http.get(this.baseUrl+"/qbank/quedetails/"+id)
   }
 
   // Calculate the average rating for a question
