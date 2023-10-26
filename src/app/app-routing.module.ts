@@ -17,9 +17,11 @@ import { QlistComponent } from './components/qbank/qlist/qlist.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { QuizplayerComponent } from './components/quizplayer/quizplayer.component';
 import { QuizComponent } from './components/quiz/quiz.component';
+import { SharedashboardComponent } from './components/sharedashboard/sharedashboard.component';
 const routes: Routes = [
  {path: "", redirectTo: 'home', pathMatch: 'full'},
   {path:"home",component:HomeComponent},
+  {path:"share",component:SharedashboardComponent},
   {path:"setting",component:SettingsComponent},
   {path:"profile",component:ProfileComponent},
   {path:"contactUs",component:ContactUsComponent},

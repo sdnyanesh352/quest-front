@@ -42,6 +42,7 @@ import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
 import { BodyComponent } from './components/body/body.component';
 import { QuizplayerComponent } from './components/quizplayer/quizplayer.component';
 import { QuizComponent } from './components/quiz/quiz.component';
+import { SharedashboardComponent } from './components/sharedashboard/sharedashboard.component';
 
 
 @NgModule({
@@ -72,7 +73,8 @@ import { QuizComponent } from './components/quiz/quiz.component';
     SidemenuComponent,
     BodyComponent,
     QuizplayerComponent,
-    QuizComponent
+    QuizComponent,
+    SharedashboardComponent
   ],
   imports: [
     BrowserModule,HttpClientModule,RouterModule, MatButtonModule,

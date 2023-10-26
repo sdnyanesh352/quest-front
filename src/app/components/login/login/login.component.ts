@@ -20,7 +20,11 @@ export class LoginComponent {
 
   }
 
-  onSubmit(email:string,password:string){
+  onSubmit(username:string,password:string){
+    
+    this.authService.SignIn(username, password);
+    this.isLoggedIn=this.authService.isLoggedIn;
+    console.log("this.isLoggedIn "+this.isLoggedIn);
     console.log(this.username.length);
     console.log(this.password);
   }

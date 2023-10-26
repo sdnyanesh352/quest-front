@@ -26,6 +26,7 @@ export class AuthService {
         this.userData = user;
         localStorage.setItem('user', JSON.stringify(this.userData));
         JSON.parse(localStorage.getItem('user')!);
+        console.log("28 line "+JSON.stringify(this.userData));
       } else {
         localStorage.setItem('user', 'null');
         JSON.parse(localStorage.getItem('user')!);
@@ -34,15 +35,23 @@ export class AuthService {
   }
   // Sign in with email/password
   SignIn(email: string, password: string) {
+    console.log("I am into sign in service");
     return this.afAuth
       .signInWithEmailAndPassword(email, password)
       .then((result) => {
         this.SetUserData(result.user);
-        this.afAuth.authState.subscribe((user) => {
+
+        
+         this.afAuth.authState.subscribe((user) => {
           if (user) {
+            localStorage.setItem('user', JSON.stringify(this.userData));
+            JSON.parse(localStorage.getItem('user')!);
+            console.log("i m logged in ");
+            
             this.router.navigate(['dashboard']);
+            
           }
-        });
+        }); 
       })
       .catch((error) => {
         window.alert(error.message);
@@ -84,7 +93,8 @@ export class AuthService {
   // Returns true when user is looged in and email is verified
   get isLoggedIn(): boolean {
     const user = JSON.parse(localStorage.getItem('user')!);
-    return user !== null && user.emailVerified !== false ? true : false;
+    return user !== null;
+    //return user !== null && user.emailVerified !== false ? true : false;
   }
   /* Setting up user data when sign in with username/password, 
   sign up with username/password and sign in with social auth  
