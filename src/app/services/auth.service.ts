@@ -155,24 +155,43 @@ export class AuthService {
   GoogleAuth() {
     return this.AuthLogin(new auth.GoogleAuthProvider());
   }
-  // Auth logic to run auth providers
+   
   AuthLogin(provider) {
     return this.afAuth
       .signInWithPopup(provider)
-      .then((result) => {
-        console.log('You have been successfully logged in!');
-        //this.router. navigateByUrl("/dashboard");
-        //this.router.navigate(['dashboard']);
-        //window.location.reload;
-
+      .then(async (result) => {
+        console.log('Successfully logged in with Google!', result);
+   
+        // After successful Google authentication, post the registration data
+  const signUpForm = { email: result.user.email ,loginType:'googleAuth'}; // Assuming you want to use the email from Google as the registration email
+   
+  await this.http.post<any>(this.baseUrl + "/sign-in", signUpForm, this.httpOptions)
+          .toPromise()
+          .then((response: any) => {
+            console.log("Response received:", response);
+            // Handle the response data here
+            if (response && response.success) {
+              // Successful response
+              // You can access the response data, e.g., response.data
+            } else {
+              // Handle any errors or unexpected responses
+              console.error("Error in response:", response);
+            }
+          })
+          .catch((error: any) => {
+            console.error("Error occurred:", error);
+            // Handle the error, e.g., show an error message to the user
+            // You can access error.status, error.statusText, etc.
+          });
+   
+        // Redirect to the dashboard
         this.router.navigate(['/dashboard']).then(() => {
-
           window.location.reload();
-    
         });
       })
       .catch((error) => {
-        console.log(error);
+        console.error(error);
       });
   }
+  
 }

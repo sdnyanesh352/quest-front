@@ -14,7 +14,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginComponent {
   username:string='';
   password:string='';
-  loginForm:LoginForm={email:'',password:''};
+  loginForm:LoginForm={email:'',password:'',loginType:''};
   rememberMe:boolean=false;
   isforgotPass:boolean=false;
   isLoggedIn:boolean=false;
