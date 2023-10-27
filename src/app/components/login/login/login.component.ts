@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import {FirebaseApp,} from 'firebase/app';
+import { LoginForm } from 'src/app/model/loginform';
 import { AuthService } from 'src/app/services/auth.service';
 
 
@@ -13,6 +14,7 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginComponent {
   username:string='';
   password:string='';
+  loginForm:LoginForm={email:'',password:''};
   rememberMe:boolean=false;
   isforgotPass:boolean=false;
   isLoggedIn:boolean=false;
@@ -20,9 +22,9 @@ export class LoginComponent {
 
   }
 
-  onSubmit(username:string,password:string){
+  onSubmit(){
     
-    this.authService.SignIn(username, password);
+    this.authService.SignIn(this.loginForm);
     this.isLoggedIn=this.authService.isLoggedIn;
     console.log("this.isLoggedIn "+this.isLoggedIn);
     console.log(this.username.length);

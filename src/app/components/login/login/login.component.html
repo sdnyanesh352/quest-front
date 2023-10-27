@@ -1,92 +1,27 @@
-<!-- 
-<div class="login-container" *ngIf="!isforgotPass">
-    <form (ngSumit)="onSubmit()">
-        <div class="form-group">
-            <input type="text" id="username" [(ngModel)]="username" class="input" name="username"  placeholder="Username"/>
-        </div>
-        <div class="form-group">
-            <input type="password" id="password" [(ngModel)]="password" class="input" name="password" placeholder="Password" required/>
-        </div>
-        <label>
-            <input type="checkbox" [(ngModel)]="rememberMe" name="rememberMe"/> Remember Me
-        </label>
-        <div class="form-group">
-            <button  mat-raised-button color="primary" type="submit">Login</button>
-            <button  mat-raised-button color="primary" (click)="signup()">SignUp</button>
-            <button  mat-raised-button color="primary" >Forgot Password</button>
-        </div>
-    
-    
-    </form>
-    <p> Form without form Builder and form control</p>
 
-</div>
-<div class="forgot-pass-class" *ngIf="isforgotPass">
-    <div>
-        <div>
-            <input type="text" id="username" [(ngModel)]="username" name="username"  placeholder="Username"/>
-        </div>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <input type="text" class="input" name="email" placeholder="Username" [(ngModel)]="loginForm.email" />
     </div>
-    <div>
-        <button type="submit" (click)="forgotpass()">Forgot password</button>
+    <div class="form-group">
+      <input type="password" class="input" name="password" placeholder="Password" required [(ngModel)]="loginForm.password" />
     </div>
-
-
-</div> -->
-
-
-<div class="displayTable" *ngIf="!isLoggedIn">
-    <div class="displayTableCell">
-      <div class="authBlock">
-        <h3>Sign In</h3>
-        <div class="formGroup">
-          <input
-            type="text"
-            class="formControl"
-            placeholder="Username"
-            #userName
-            required
-          />
-        </div>
-        <div class="formGroup">
-          <input
-            type="password"
-            class="formControl"
-            placeholder="Password"
-            #userPassword
-            required
-          />
-        </div>
-        <!-- Calling SignIn Api from AuthService -->
-        <div class="formGroup">
-          <input
-            type="button"
-            class="btn btnPrimary"
-            value="Log in"
-            (click)="onSubmit(userName.value, userPassword.value)"
-          />
-        </div>
-        <div class="formGroup">
-          <span class="or"><span class="orInner">Or</span></span>
-        </div>
-        <div class="forgotPassword">
-          <span routerLink="/forgot-password">Forgot Password?</span>
-        </div>
-      </div>
-      <div class="formGroup">
-        <button type="button" (click)="loginWithGoogle()">
-          Log in with Google
-        </button>
-      </div>
-      <div class="redirectToLogin">
-        <span
-          >Don't have an account?<span
-            class="redirect"
-            routerLink="/register-user"
-          >
-            Sign Up</span
-          ></span
-        >
-      </div>
+    <div class="form-group">
+      <button mat-raised-button color="primary" type="submit">Login</button>
     </div>
+  </form>
+  <div class="formGroup">
+    <button type="button" (click)="loginWithGoogle()">
+      Log in with Google
+    </button>
+  </div>
+  <div class="redirectToLogin">
+    <span
+      >Don't have an account?<span
+        class="redirect"
+        routerLink="/register-user"
+      >
+        Sign Up</span
+      ></span
+    >
   </div>

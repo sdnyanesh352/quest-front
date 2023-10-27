@@ -7,16 +7,25 @@ import {
 import * as auth from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { LoginForm } from '../model/loginform';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  private baseUrl = 'http://localhost:8083';
   userData: any; // Save logged in user data
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+    }),
+  };
   constructor(
     public afs: AngularFirestore, // Inject Firestore service
     public afAuth: AngularFireAuth, // Inject Firebase auth service
     public router: Router,
+    private http: HttpClient,
     public ngZone: NgZone // NgZone service to remove outside scope warning
   ) {
     /* Saving user data in localstorage when 
@@ -34,21 +43,42 @@ export class AuthService {
     });
   }
   // Sign in with email/password
-  SignIn(email: string, password: string) {
+  SignIn(loginForm: LoginForm) {
     console.log("I am into sign in service");
     return this.afAuth
-      .signInWithEmailAndPassword(email, password)
+      .signInWithEmailAndPassword(loginForm.email, loginForm.password)
       .then((result) => {
         this.SetUserData(result.user);
 
         
-         this.afAuth.authState.subscribe((user) => {
+         this.afAuth.authState.subscribe(async (user) => {
           if (user) {
             localStorage.setItem('user', JSON.stringify(this.userData));
             JSON.parse(localStorage.getItem('user')!);
-            console.log("i m logged in ");
-            
+            const headers = { 'content-type': 'application/json'} 
+         
+            console.log("i m logged in "+JSON.stringify(loginForm));
             this.router.navigate(['dashboard']);
+           await this.http.post<LoginForm>(this.baseUrl+"/sign-in",loginForm,this.httpOptions).toPromise()
+           .then((response: any) => {
+            console.log("Response received:", response);
+         
+            // Handle the response data here
+            if (response && response.success) {
+              // Successful response
+              // You can access the response data, e.g., response.data
+            } else {
+              // Handle any errors or unexpected responses
+              console.error("Error in response:", response);
+            }
+          })
+          .catch((error: any) => {
+            console.error("Error occurred:", error);
+         
+            // Handle the error, e.g., show an error message to the user
+            // You can access error.status, error.statusText, etc.
+          });
+ 
             
           }
         }); 
